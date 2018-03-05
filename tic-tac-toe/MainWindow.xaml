@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:tic_tac_toe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Choose the side!" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="LimeGreen"/>
+            <Setter Property="FontSize" Value="65"/>
+            <Setter Property="FontFamily" Value="Showcard Gothic"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFF9EBEB"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="X" Content="X" HorizontalAlignment="Left" Margin="95,115,0,0" VerticalAlignment="Top" Width="115" Height="94" FontFamily="Showcard Gothic" FontSize="48" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF1CA82D"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="O" Content="O" HorizontalAlignment="Left" Margin="325,114,0,0" VerticalAlignment="Top" Width="115" Height="94" Click="Button_Click" FontFamily="Showcard Gothic" FontSize="48">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF1CA82D" Offset="0.094"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="95,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="345" FontSize="36" FontFamily="Showcard Gothic" TextAlignment="Center"><Run FontSize="24" Text="Choose   "/><Run Text="X   "/><Run FontSize="24" Text="or"/><Run Text="   O!"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="126,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Height="33"><Run FontSize="18" FontFamily="Showcard Gothic" Text="To play with a friend press:"/><LineBreak/><Run Text=""/></TextBlock>
+        <Button Content="2players" HorizontalAlignment="Left" Margin="161,252,0,0" VerticalAlignment="Top" Width="221" Height="50" FontSize="36" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF1CA82D"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>
